@@ -208,26 +208,31 @@ displayDiscount(luckyNumber, calculateTotal(luckyNumber, cartPrice));
  * HINT: The way we prompt for a value could be improved
  */
 
-let confirmed = confirm("Would you care to enter a number?");
-
-
-if (confirmed) {
-    let number = parseInt(prompt("Fine... Please enter a whole number, then."));
-    let numPlus100 = (number + 100)
-
+function isEvenOrOdd(number) {
     if (number % 2 === 0) {
         alert("Your number is even");
     } else {
         alert("Your number is odd");
     }
+}
 
-    alert("Your number 100 greater is " + numPlus100 + ".");
+function plus100(number) {
+    alert("Your number 100 greater is " + (number + 100) + ".");
+}
 
+function positiveOrNegative(number) {
     if (number >= 0) {
         alert("Your number is positive.");
     } else {
         alert("Your number is negative.");
     }
+}
+
+if (confirm("Would you care to enter a number?")) {
+    let number = parseInt(prompt("Fine... Please enter a whole number, then."));
+    isEvenOrOdd(number);
+    plus100(number);
+    positiveOrNegative(number);
 } else {
     alert("Then why did you call me...? Weirdo...")
 }
