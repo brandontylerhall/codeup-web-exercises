@@ -11,9 +11,9 @@
  * Example
  * > sayHello("codeup") // returns "Hello, codeup!"
  */
-function sayHello(name) {
-    return "Hello there, " + name + "!";
-}
+    function sayHello(name) {
+        return "Hello there, " + name + "!";
+    }
 
 /**
  * TODO:
@@ -22,8 +22,8 @@ function sayHello(name) {
  *
  * console.log 'helloMessage' to check your work
  */
-let helloMessage = sayHello("Brandon")
-console.log(helloMessage);
+    let helloMessage = sayHello("Brandon")
+    console.log(helloMessage);
 
 /**
  * TODO:
@@ -31,12 +31,12 @@ console.log(helloMessage);
  * variable to the 'sayHello' function. You should see the same output in the
  * console.
  */
-let myName = "Brandon"
-console.log(sayHello(myName));
+    let myName = "Brandon"
+    console.log(sayHello(myName));
 
 // Don't modify the following line, it generates a random number between 1 and 3
 // and stores it in a variable named random
-var random = Math.floor((Math.random() * 3) + 1);
+    var random = Math.floor((Math.random() * 3) + 1);
 
 /**
  * TODO:
@@ -55,11 +55,11 @@ var random = Math.floor((Math.random() * 3) + 1);
  * different result everytime you refresh the page if you are using the random
  * number)
  */
-function isTwo(number) {
-    return (number == 2)
-}
+    function isTwo(number) {
+        return (number == 2)
+    }
 
-console.log(isTwo(random));
+    console.log(isTwo(random));
 
 /**
  * TODO:
@@ -72,21 +72,23 @@ console.log(isTwo(random));
  * > calculateTip(0.25, 25.50) // returns 6.375
  * > calculateTip(0.15, 33.42) // returns 5.013
  */
-function calculateTip(tipPercent, billTotal)  {
-    let total = tipPercent * billTotal
-    console.log(total);
-    return total
+    function calculateTip(tipPercent, billTotal)  {
+        let total = tipPercent * billTotal
+        return total
 }
-/**
+
+    console.log(calculateTip(.2, 20));
+
+    /**
  * TODO:
  * Use prompt and alert in combination with your calculateTip function to
  * prompt the user for the bill total and a percentage they would like to tip,
  * then display the dollar amount they should tip
  */
-    let billTotal = parseInt(prompt("Hello, what was your bill's total price?"))
-    let tipPercent = parseFloat(prompt("And what is the percentage you would like to tip?"))
-    let total = tipPercent * billTotal
-    alert("The amount you should tip will be: $" + total)
+        let billTotal = parseInt(prompt("Hello, what was your bill's total price?"))
+        let tipPercent = parseFloat(prompt("And what is the percentage you would like to tip?"))/100
+
+        alert("The amount you  will then pay will be: $" + calculateTip(billTotal * tipPercent))
 /**
  * TODO:
  * Create a function named `applyDiscount`. This function should accept a price
@@ -101,15 +103,10 @@ function calculateTip(tipPercent, billTotal)  {
  *
  * > applyDiscount(45.99, 0.12) // 40.4712
  */
-function applyDiscount(originPrice, discountPrice) {
-    let newTotal = originPrice * discountPrice
-    console.log(newTotal);
-    return newTotal
-}
+    function applyDiscount(price, discount) {
+        let discountPrice = (price - (price * discount))
+        return discountPrice
+    }
 
-let originPrice = parseInt(prompt("Hello, what was your item's original price?"))
-let discountPrice= parseFloat(prompt("And what is the percentage you are able to discount this item?"))
-let newTotal = originPrice * discountPrice
-alert("The amount you are getting taken off will be: $" + newTotal)
-
+    console.log(applyDiscount(100, 2));
 })();
