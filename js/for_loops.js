@@ -1,11 +1,12 @@
+// /*
 //multiplication table function
-// function showMultiplicationTable(x) {
-//     for (let i = 1; i < 11; i++) {
-//         console.log(x + " x " + i + " = " + (i * x));
-//     }
-// }
-//
-// showMultiplicationTable(7)
+function showMultiplicationTable(x) {
+    for (let i = 1; i < 11; i++) {
+        console.log(x + " x " + i + " = " + (i * x));
+    }
+}
+
+showMultiplicationTable(7)
 
 //random even number function
 function evenNum() {
@@ -20,3 +21,14 @@ function evenNum() {
 }
 
 evenNum();
+
+//pyramid function
+    //answer found: https://stackoverflow.com/questions/1877475/repeat-a-string-in-javascript-a-number-of-times
+function pyramid() {
+    for (let i = 1; i < 10; i++) {
+        console.log(Array(i + 1).join(i));
+    }
+}
+
+pyramid()
+
