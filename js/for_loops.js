@@ -1,4 +1,3 @@
-// /*
 //multiplication table function
 function showMultiplicationTable(x) {
     for (let i = 1; i < 11; i++) {
@@ -30,5 +29,13 @@ function pyramid() {
     }
 }
 
-pyramid()
+pyramid();
 
+//decrement loop
+function minus5() {
+    for (let i = 100; i > 0; i -= 5) {
+        console.log(i);
+    }
+}
+
+minus5();
