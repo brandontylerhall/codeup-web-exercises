@@ -1,4 +1,4 @@
-console.log("BREAK AND CONTINUE EXERCISE: \n");
+console.log("BREAK AND CONTINUE EXERCISE:");
 console.log("");
 
 //
