@@ -1,3 +1,6 @@
+console.log("FOR LOOPS EXERCISE:");
+console.log("");
+
 //multiplication table function
 function showMultiplicationTable(x) {
     for (let i = 1; i < 11; i++) {
@@ -39,3 +42,5 @@ function minus5() {
 }
 
 minus5();
+
+console.log("");
