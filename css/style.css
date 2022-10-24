@@ -1,5 +1,71 @@
-.fancy-header {
-    color: purple;
+/*Center the main heading*/
+h1.fancy-header {
+    text-align: center;
+}
+
+/*Add a style to change the color of the headers on your page and make them underlined.*/
+h1 {
+    color: cadetblue;
     text-decoration: underline;
 }
 
+h2 {
+    color: cornflowerblue;
+    text-decoration: underline;
+
+}
+
+/*Add a style to change the background color of the page.*/
+body {
+    background-color: antiquewhite;
+}
+
+/*Add a style to add a background image to your background. Search how to manipulate the position, sizing of this background image.*/
+main {
+    background-image: url("/img/cursed.png");
+    background-repeat: no-repeat;
+    background-size: 400px;
+    background-position: top right;
+}
+
+/*Add a style to change the list-style to something other than the default bullet.*/
+ul {
+    list-style: georgian;
+}
+
+ol {
+    list-style: lower-roman;
+}
+/*Add a style to change the font for the entire page. Use google fonts if you would like.*/
+body {
+    font-family: "Academy Engraved LET";
+}
+
+/*Add a style to change the table, table cells td and rows tr padding and font sizes.*/
+th,
+td {
+    border: 2px solid;
+    padding: 7px;
+}
+
+table {
+    border-collapse: collapse;
+    font-size: 1.2em;
+    font-family: "Zapf Dingbats";
+}
+
+/*Add a style to alter the anchor tags and its different states. (e.g. link, visited, hover and active).*/
+a:link {
+    color: darkslategray;
+}
+
+a:visited {
+    color: indigo;
+}
+a:hover {
+    color:cyan;
+}
+
+a:active {
+    color:darkgreen;
+}
