@@ -61,15 +61,14 @@ fieldset {
     font-weight: bold;
     /* The border of this element should be 1px, and its color should be light grey */
     background-color: #0fb784;
+    border: 1px solid lightgray;
 }
 
 .form-control {
     /* There must be 4px on top of the text and below the text of an input with this class */
-    margin-top: 4px;
-    margin-bottom: 4px;
+    padding: 4px 0;
     /* It should have a separation of .5em from elements on top of it and below it */
-    padding-top: .5em;
-    padding-bottom: .5em;
+    margin: .5em 0;
     /* You'll need to use the `calc` function to make the width of this element match the width of the button */
     width: calc(100% - 4px);
 }
