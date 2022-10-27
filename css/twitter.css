@@ -5,6 +5,7 @@
     --light-bg: #FFF;
     --separator-color: #DDD;
 }
+
 * {
     box-sizing: border-box;
 }
@@ -96,14 +97,12 @@ a {
     float: left;
     width: calc(50% - 1em);
     margin: 0 .5em;
-
 }
 
 .who-to-follow {
     float: left;
     width: calc(25% - 1em);
     margin: 0 .5em;
-
 }
 
 .btn {
@@ -124,6 +123,7 @@ a {
     border-radius: 100%;
     border: 4px solid var(--light-bg);
 }
+
 .text-right {
     text-align: right;
 }
