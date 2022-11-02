@@ -1,0 +1,24 @@
+/*TODO:
+link text, the logo, and icons are surrounded by anchor tags
+anchor tags are display: inline-block
+clickable area of links immediately flow from one link to the next (padding will help achieve this)
+Google Fonts used for logo and link text ("Montserrat" and "Work Sans", respectively)
+no explicit height given to the navbar
+default styling is removed as needed from the body, unordered list and anchor tag elements
+logo is horizontally centered on the navbar (automatic margins will help achieve this)*/
+
+/*
+the "Logo" text is 3em with .2em of padding above and below
+links turn blue on hover
+box-sizing: border-box for all elements
+*/
+
+* {
+    box-sizing: border-box;
+}
+
+.navbar {
+    background: grey;
+    font-size: 3em;
+    padding: .2em 0;
+}
