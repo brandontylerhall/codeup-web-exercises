@@ -27,7 +27,7 @@ function tallestHammie(hamsters) {
 	return tallestHam
 }
 
-const hamsters = [
+const hamsters1 = [
 	{
 		name: "Hamtaro",
 		heightInMM: 86,
@@ -61,7 +61,7 @@ const hamsters = [
 	}
 ];
 
-console.log(tallestHammie(hamsters));
+console.log(tallestHammie(hamsters1));
 // should return {name: "Boss", heightInMM: 120, fur: ['brown', 'white'], gender: "male", dateOfBirth: "September 21"};
 
 function fizzBuzz() {
@@ -78,3 +78,50 @@ function fizzBuzz() {
 }
 
 fizzBuzz();
+
+//Write a function that takes in an array of objects and returns the average of the heightInMM properties from each object.
+const hamsters2 = [
+	{
+		name: "Hamtaro",
+		heightInMM: 86,
+		fur: ['orange', 'white'],
+		gender: "male",
+		dateOfBirth: "August 6"
+	} , {
+		name: "Bijou",
+		heightInMM: 75,
+		fur: ['white'],
+		gender: "female",
+		dateOfBirth: "July 10"
+	} , {
+		name: "Oxnard",
+		heightInMM: 100,
+		fur: ['grey', 'white'],
+		gender: "male",
+		dateOfBirth: "May 3"
+	} , {
+		name: "Boss",
+		heightInMM: 120,
+		fur: ['brown', 'white'],
+		gender: "male",
+		dateOfBirth: "September 21"
+	} , {
+		name: "Snoozer",
+		heightInMM: 85,
+		fur: ['brown', 'white', "pink"],
+		gender: "male",
+		dateOfBirth: "January 14"
+	}
+];
+
+function getAverageHeight(array) {
+	let totalHeight = 0
+
+	for (let element of array) {
+		totalHeight += element.heightInMM;
+	}
+	return totalHeight / array.length;
+}
+
+console.log(getAverageHeight(hamsters2));
+//should return 93.2
