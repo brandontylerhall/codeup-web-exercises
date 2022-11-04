@@ -3,3 +3,8 @@
     height: 346px;
     background-size: cover;
 }
+
+/*TODO:
+   To create the light title bar, create another <div> within your jumbotron and change the [opacity][opacity] of the light background. This component should be hidden for devices with small screens. See the documentation for the display utility classes to hide the jumbotron properly.
+*/
+
