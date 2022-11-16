@@ -5,12 +5,41 @@
 </head>
 <body>
 
+<div>
+  <h1 id="header" class="cool-one">jQuery Exercise</h1>
+  <p id="para" class="lame">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolore dolorem eligendi est in repudiandae. A aperiam cumque dignissimos, dolores ex excepturi impedit laboriosam necessitatibus numquam optio possimus vitae. Facere, quod.</p>
+  <ul id="list" class="gobble">
+    <li id="li1" class="codeup">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Architecto earum eius labore magnam nostrum pariatur unde veritatis. Assumenda delectus dolor eius id, illo libero nobis perferendis quis totam veritatis. Repellendus.</li>
+    <li id="li2" class="codeup">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Asperiores delectus dolorum eius eligendi enim fuga nemo nihil obcaecati, porro tempore? Deleniti ea error est, maxime quasi quia repellat unde. Quia?</li>
+    <li id="li3" class="codeup">Lorem ipsum dolor sit amet, consectetur adipisicing elit. A, aut facilis in quae recusandae sit voluptates voluptatum? Distinctio dolore enim et, illo laboriosam nulla porro quas quasi rem sunt vero.</li>
+  </ul>
+</div>
 <script src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
+<!--
+
+
+Make all paragraphs have a font size of 18px when they are double clicked.
+
+Set all li text color to red when the mouse is hovering; reset to black when it is not.-->
 
 <script>
-  $(function() {
-    alert( 'The DOM has finished loading!' );
-  });
+  function changeOrange() {
+    $(this).css('background-color', 'orange');
+  }
+  function changeSize() {
+    $(this).css('font-size', '18px');
+  }
+  function changeRed() {
+    $(this).css('color', 'red')
+  }
+  function changeBlack() {
+    $(this).css('color', 'black')
+  }
+
+$("h1").click(changeOrange)
+$("p").dblclick(changeSize)
+$("li").hover(changeRed, changeBlack)
+
 </script>
 
 </body>
