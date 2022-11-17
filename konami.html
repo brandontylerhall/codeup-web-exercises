@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link crossorigin="anonymous" href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css"
+		  integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" rel="stylesheet">
+	<title>Konami Code</title>
+</head>
+<!--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------->
+<body>
+
+<div id="text" class="fs-1">
+	<p class="position-absolute top-50 start-50 translate-middle">ENTER THE KONAMI CODE OR ELSE</p>
+</div>
+
+<div id="images">
+	<!--top left right bottom-->
+	<img src="/img/vibe-check.gif" class="position-absolute top-0 start-50 translate-middle-x">
+	<img src="/img/vibe-check.gif" class="position-absolute top-50 start-0 translate-middle-y">
+	<img src="/img/vibe-check.gif" class="position-absolute top-50 end-0 translate-middle-y">
+	<img src="/img/vibe-check.gif" class="position-absolute bottom-0 start-50 translate-middle-x">
+</div>
+<!---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------->
+<script crossorigin="anonymous"
+		integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+		src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+<script src="/js/jquery.js"></script>
+<script>
+    "use strict";
+
+    /*TODO:
+  			  * After the correct Konami Code sequence is inputted, have the script alert the user: "You have added 30 lives! Other ideas:
+	*/
+    let element = document.getElementById("idOfParent")
+	/*object of key codes with value of their key*/
+    let allowedKeys = {
+        37: 'left',
+        38: 'up',
+        39: 'right',
+        40: 'down',
+        65: 'a',
+        66: 'b'
+    };
+
+    /*this is an array of the values from the above object*/
+    let konamiCode = ['up', 'up', 'down', 'down', 'left', 'right', 'left', 'right', 'b', 'a'];
+    /*this is going to work as an index number later*/
+    let konamiPos = 0;
+
+    function cheatModeActivate() {
+        // creates a new img element
+        const contraImg = document.createElement('img');
+        // sets the src attribute to the contra image
+        contraImg.src = "/img/contra.jpg";
+        // adds a list of classes (hence .classList)
+        contraImg.classList.add("position-absolute", "top-50", "start-50", "translate-middle", "h-50", "w-75")
+        // creates variables so we can clear the elements in the next lines
+        const imgDiv = document.getElementById("images");
+        // removes div containing text
+        $("#text").empty();
+        // removes all child elements of the div containing images
+        while (imgDiv.firstChild) {
+            imgDiv.removeChild(imgDiv.firstChild);
+        }
+        document.body.appendChild(contraImg);
+        // will fade in/out image every 100ms
+        $("img").fadeOut(100).fadeIn(100).fadeOut(100).fadeIn(100).fadeOut(100).fadeIn(100).fadeOut(100).fadeIn(100).fadeOut(100).fadeIn(100).fadeOut(100).fadeIn(100).fadeOut(100).fadeIn(100).fadeOut(100).fadeIn(100).fadeOut(100).fadeIn(100).fadeOut(100).fadeIn(100).fadeOut(100).fadeIn(100).fadeOut(100).fadeIn(100).fadeOut(100).fadeIn(100).fadeOut(100).fadeIn(100);
+        // reloads (resets) the page after 3s
+        setTimeout(() => {location.reload()}, 3000)
+    }
+
+	$(document).keydown(function (e) {
+		/*key is equal to the value of the keycode in the array*/
+		let key = allowedKeys[e.keyCode];
+		/*required key is equal to value of konamiCode at the index of konamiPos (konamiPos = 0 initially so the first key is 'up' which is set to the key code of 38*/
+		let requiredKey = konamiCode[konamiPos];
+
+
+			if (key === requiredKey) {
+				/*this increases the konamiPos which in turn increases the index at which the requiredKey variable is now set to*/
+				konamiPos++;
+				if (konamiPos === konamiCode.length) {
+					cheatModeActivate();
+				}
+				/*resets if you're too scrubby to know the code*/
+			} else {
+				konamiPos = 0;
+			}
+	});
+
+
+</script>
+</body>
+</html>
