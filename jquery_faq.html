@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Yellowstone National Park FAQ</title>
+	<link href="css/faq-style.css" rel="stylesheet">
+</head>
+<body>
+<div class="demo-wrap">
+	<div class="demo-content">
+		<div class="text">
+			<h1>Do You Know Yellowstone? Take This Quiz!</h1>
+
+
+			<dl>
+				<p id="subtitle">Write down your answers to the questions below. When you are done, click the link at the bottom of the page to reveal the answers!</p>
+
+				<dt class="margin">Where can I see Animals?</dt>
+				<dd class="invisible">Check at visitor centers for information about recent sightings.</dd>
+
+				<dt class="margin">How did Yellowstone get its name?</dt>
+				<dd class="invisible">Yellowstone National Park is named after the Yellowstone River, the major river running
+					through the park. According to French-Canadian trappers in the 1800s, they asked the name of the river from the
+					Minnetaree tribe, who live in what is now eastern Montana. They responded “Mi tse a-da-zi,” which literally
+					translates as “Rock Yellow River.” The trappers translated this into French as “Roche Jaune” or “Pierre Jaune.”
+					In 1797, explorer-geographer David Thompson used the English translation—“Yellow Stone.” Lewis and Clark called
+					the Yellowstone River by the French and English forms. Subsequent use formalized the name as “Yellowstone.
+				</dd>
+
+				<dt class="margin">Is Yellowstone the largest national park?</dt>
+				<dd class="invisible">No. More than half of Alaska’s national park units are larger, including Wrangell–St. Elias
+					National Park and Preserve, which is the largest unit (13 million acres) in the National Park System. Until
+					1994, Yellowstone (at 2.2 million acres) was the largest national park in the contiguous United States. That
+					year Death Valley National Monument was expanded and became a national park—it has more than 3 million acres.
+				</dd>
+
+				<dt class="margin">Is Yellowstone the most visited national park?</dt>
+				<dd class="invisible">Yellowstone is in the top five national parks for number of recreational visitors. Great Smoky
+					Mountains National Park often has the most visitors.</dd>
+
+				<dt class="margin">What is the difference between a national park and a national forest?</dt>
+				<dd class="invisible">National parks are administered by the Department of the Interior and national forests by the
+					Department of Agriculture. The National Park Service is mandated to preserve resources unimpaired, while the
+					Forest Service is mandated to wisely manage resources for many sustainable uses. Six national forests surround
+					Yellowstone National Park.
+				</dd>
+
+				<dt class="margin">How many rangers work in Yellowstone?</dt>
+				<dd class="invisible">Approximately 738 people work for the National Park Service during the peak summer season.
+					Approximately 386 are permanent, year-round employees. Park rangers work in education, resource management, law
+					enforcement, emergency medical services, and backcountry operations. Other employees specialize in research,
+					maintenance, management, administration, trail maintenance, fire management, and fee collection.
+				</dd>
+
+				<dt class="margin">How do you become a park ranger?</dt>
+				<dd class="invisible">Many National Park Service employees begin their careers as volunteers or as seasonal
+					employees. Hiring is very competitive and is conducted through the Office of Personnel Management.
+				</dd>
+
+				<dt class="margin">Can we swim in rivers and lakes?</dt>
+				<dd class="invisible">Swimming is not recommended because most lakes and streams are dangerously cold. Firehole
+					Canyon, near Madison Junction, has a swimming area popular in summer. Soaking in thermal features is illegal.
+					Swimming is allowed during daylight hours only and at your own risk.
+				</dd>
+
+				<dt class="margin">What is the highest peak in the park?</dt>
+				<dd class="invisible">Eagle Peak in the southeastern part of Yellowstone is the highest at 11,358 feet.</dd>
+
+				<dt class="margin">Does Yellowstone include a federally designated wilderness?</dt>
+				<dd class="invisible">No. Most of the park was recommended for this designation in 1972, but Congress has not acted
+					on the recommendation.
+				</dd>
+			<a href="#" id="toggle-invis">Click here to toggle the answers!</a>
+			</dl>
+
+		</div>
+	</div>
+</div>
+
+<script src="js/jquery.js"></script>
+
+<script>
+	$('#toggle-invis').click(function(e) {
+        e.preventDefault();
+        $('dd').toggleClass('invisible');
+        $('dt').toggleClass('margin')
+	})
+</script>
+</body>
+</html>
