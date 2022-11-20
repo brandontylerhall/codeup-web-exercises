@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>National Park Quiz</title>
+	<link href="css/faq-style2.css" rel="stylesheet">
+</head>
+<body>
+<div class="demo-wrap">
+	<div class="demo-content">
+		<div class="text">
+			<h1>Do You Know Your National Parks? Take This Quiz!</h1>
+
+			<div class="ul">
+				<h3><a href="#">Yellowstone National Park</a></h3>
+				<ul id="yellowstone">
+					<li>Yellowstone National Park is named after the Yellowstone River, the major river running
+						through the park.
+					</li>
+					<li>Yellowstone is in the top five national parks for number of recreational visitors.</li>
+					<li>Approximately 738 people work for the National Park Service during the peak summer season.</li>
+					<li>Yellowstone encompasses 3,472 square miles (2,221,766 acres) which makes it larger than Rhode
+						Island
+						and Delaware combined.
+					</li>
+					<li>Eagle Peak in the southeastern part of Yellowstone is the highest at 11,358 feet.</li>
+				</ul>
+			</div>
+			<div class="ul">
+				<h3><a href="#">Zion National Park</a></h3>
+				<ul id="zion">
+					<li>Before it was called Zion, the park was called "Mukuntuweap National Monument".</li>
+					<li>Zion is also home to the Kolob Arch, which is one of the largest in the world.</li>
+					<li>Inside of the Kolob Canyon District is the Kolob Volcano, a volcano more than 1.1 million years
+						old.
+					</li>
+					<li>Zion National Park’s geology features some of the tallest sandstone monoliths in the world.</li>
+					<li>Zion is home to the California Condor, which is the largest bird in North America.</li>
+				</ul>
+			</div>
+			<div class="ul">
+				<h3><a href="#">Glacier National Park</a></h3>
+				<ul id="glacier">
+					<li>The park’s water flows in three directions</li>
+					<li>The park has 734 miles of hiking trails</li>
+					<li>The park gets around 160 inches of snowfall annually.</li>
+					<li>The park’s nickname is the Crown of the Continent.</li>
+					<li>The land that now comprises Glacier previously belonged to the Blackfeet tribe.</li>
+				</ul>
+			</div>
+			<button>Click here to highlight the most interesting facts!</button>
+		</div>
+	</div>
+</div>
+
+<script src="js/jquery.js"></script>
+
+<script>
+    $('h3').click(function (e) {
+        e.preventDefault();
+        $(this).siblings().toggleClass('bold');
+    });
+
+    $('button').click(function () {
+        $('ul').each(function () {
+            $(this).children().last().toggleClass('highlighted');
+        });
+    });
+
+    $('ul').click(function () {
+        $(this).children().first().css('color', 'blue');
+    });
+
+
+</script>
+</body>
+</html>
