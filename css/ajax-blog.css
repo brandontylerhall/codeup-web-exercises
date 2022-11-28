@@ -1,0 +1,21 @@
+body {
+    background-color: #E6ECF0;
+}
+
+h1 {
+    text-align: center;
+    font-size: 3em;
+    margin: .75em;
+    font-family: Tangerine, serif;
+    text-shadow: 4px 4px 4px #aaa;
+}
+
+.footer {
+    font-size: 1.2em;
+    font-family: Indie Flower, sans-serif;
+}
+
+.post {
+    font-size: 1.1em;
+    font-family: Orbitron, sans-serif;
+}
