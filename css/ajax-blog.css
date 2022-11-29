@@ -1,0 +1,27 @@
+body {
+    margin: 1em;
+    background-color: #E6ECF0;
+}
+
+h1 {
+    margin: .75em;
+    text-align: center;
+    font-size: 3em;
+    text-shadow: 4px 4px 4px #aaa;
+    font-family: Tangerine, serif;
+}
+
+.footer {
+    font-size: 1.2em;
+    font-family: Indie Flower, sans-serif;
+}
+
+.post {
+    font-size: 1.1em;
+    font-family: Orbitron, sans-serif;
+}
+
+.dark-mode {
+    background-color: #444;
+    color: antiquewhite;
+}
