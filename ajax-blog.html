@@ -11,10 +11,11 @@
 </head>
 <body>
 <div id="posts"></div>
+<div class="img-container position-absolute top-50 start-50 translate-middle"><img src="img/cakey.png"></div>
+<button id="dark-mode-btn">Toggle Dark Mode</button>
 
-<script crossorigin="anonymous"
-		integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44="
-		src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
+
+<script src="js/jquery.js"></script>
 <script crossorigin="anonymous"
 		integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
 		src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
@@ -28,6 +29,10 @@
                     .append('<p class="footer">' + '<strong>categories:</strong> ' + data[i].categories + '<br>' + '<strong>date published:</strong> ' + data[i].date + '</p>')
             }
         });
+
+    $("#dark-mode-btn").click(function () {
+        $('body').toggleClass('dark-mode')
+    });
 </script>
 </body>
 </html>
