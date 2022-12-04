@@ -1,14 +1,39 @@
-#info {
-    display: table;
+html, body {
+    height: 100%;
+    width: 100%;
+}
+
+#map {
+    height: 100%;
+    margin: 0;
+    display: flex;
+    position: absolute; top: 0; bottom: 0; width: 100%;
+}
+
+button {
     position: relative;
-    margin: 0 auto;
-    word-wrap: anywhere;
-    white-space: pre-wrap;
+    margin-right: 1em;
+    height: 40px;
     padding: 10px;
     border: none;
     border-radius: 3px;
     font-size: 12px;
     text-align: center;
-    color: #222;
-    background: #fff;
+    background: none;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+}
+
+/* Changes the cursor to a pointer on hover so the user knows it's clickable */
+.mapboxgl-marker:hover {
+    cursor: pointer;
+}
+
+/* darkens the marker on hover */
+.mapboxgl-marker:hover svg > g > g:nth-child(2) {
+    fill: #7993a5;
 }
