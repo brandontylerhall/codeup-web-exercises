@@ -47,7 +47,7 @@ const geolocate = new mapboxgl.GeolocateControl({
 map.addControl(new mapboxgl.NavigationControl());
 map.addControl(geolocate);
 
-// When dragend function for marker - displays updated info and centers on marker
+// when dragend function for marker - displays updated info and centers on marker
 function onDragEnd() {
     const lngLat = marker.getLngLat();
     $.get("http://api.openweathermap.org/data/2.5/weather", {
@@ -79,7 +79,7 @@ function onDragEnd() {
 
 marker.on('dragend', onDragEnd)
 
-// Creates new marker on mouseclick, updates current and forecasted weather at that location -- is draggable
+// creates new marker on mouseclick, updates current and forecasted weather at that location -- is draggable
 map.on('click', (e) => {
     marker
         .setLngLat(e.lngLat)
@@ -141,7 +141,7 @@ map.on('click', (e) => {
     marker.on('dragend', onDragEnd)
 });
 
-// Searches for value entered, flies to location, updates current and forecasted info
+// searches for value entered, flies to location, updates current and forecasted info
 $('.btn').click(function (e) {
     e.preventDefault();
     let searchFor = $('#search').val();
@@ -201,7 +201,7 @@ $('.btn').click(function (e) {
     });
 })
 
-// Function to generate info for current day
+// function to generate info for current day
 function displayInfoCurrent(data) {
     $('#current')
         .html('<div class="row d-flex space-between flex-wrap border border-dark my-3 mx-2">' +
@@ -229,7 +229,7 @@ function displayInfoCurrent(data) {
                 '</div>')
 }
 
-// Function to generate info per day
+// function to generate info per day
 function displayInfoForecast(data) {
     if (data.dt_txt.indexOf("15:00:00") !== -1) {
         let test = $('#forecast')
