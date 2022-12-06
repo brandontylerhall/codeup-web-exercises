@@ -79,7 +79,7 @@ function onDragEnd() {
 
 marker.on('dragend', onDragEnd)
 
-// Creates new marker on mouseclick, updates current and forecasted weather at that location- is draggable
+// Creates new marker on mouseclick, updates current and forecasted weather at that location -- is draggable
 map.on('click', (e) => {
     marker
         .setLngLat(e.lngLat)
@@ -141,7 +141,7 @@ map.on('click', (e) => {
     marker.on('dragend', onDragEnd)
 });
 
-// Searches for value entered, flys to location, updates current and forecasted info
+// Searches for value entered, flies to location, updates current and forecasted info
 $('.btn').click(function (e) {
     e.preventDefault();
     let searchFor = $('#search').val();
@@ -208,10 +208,10 @@ function displayInfoCurrent(data) {
                     '<div class="d-flex justify-content-center bg-secondary text-white flex-grow-1">' +
                         '<span>Current Weather</span>' +
                     '</div>' +
-                    '<div class="d-flex flex-grow-1 justify-content-center"> Temp: &nbsp;' +
+                    '<div class="d-flex flex-grow-1 justify-content-center"> Temperature: &nbsp;' +
                         '<span class="fw-bold">' + data.main.temp + '<sup>&deg;F</sup></span>' +
                     '</div>' +
-                    '<div class="d-flex flex-grow-1 justify-content-center"> Weather: &nbsp;' +
+                    '<div class="d-flex flex-grow-1 justify-content-center"> Weather Type: &nbsp;' +
                         '<span class="fw-bold">' + data.weather[0].main + '</span>' +
                     '</div>' +
                     '<div class="d-flex justify-content-center border-bottom">' +
@@ -235,10 +235,10 @@ function displayInfoForecast(data) {
         let test = $('#forecast')
             .append('<div class="row d-flex space-between flex-wrap mb-3">' +
                         '<div class="d-flex justify-content-center bg-secondary flex-grow-1 border border-dark text-white">' + data.dt_txt + '</div>' +
-                        '<div class="d-flex flex-grow-1 justify-content-center"> Temp: &nbsp;' +
+                        '<div class="d-flex flex-grow-1 justify-content-center"> Temperature: &nbsp;' +
                             '<span class="fw-bold">' + data.main.temp + '<sup>&deg;F</sup></span>' +
                         '</div>' +
-                        '<div class="d-flex flex-grow-1 justify-content-center"> Weather: &nbsp;' +
+                        '<div class="d-flex flex-grow-1 justify-content-center"> Weather Type: &nbsp;' +
                             '<span class="fw-bold">' + data.weather[0].main + '</span>' +
                         '</div>' +
                         '<div class="d-flex justify-content-center border-bottom">' +
